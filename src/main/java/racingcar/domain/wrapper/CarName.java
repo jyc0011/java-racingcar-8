@@ -35,7 +35,11 @@ public class CarName {
     }
 
     private boolean isBlank(String name) {
-        return name == null || name.trim().isEmpty();
+        if (name == null) {
+            return true;
+        }
+        String trimmedName = name.trim();
+        return trimmedName.isEmpty();
     }
 
     private void ensureLengthIsWithinLimit(String name) {
@@ -45,7 +49,8 @@ public class CarName {
     }
 
     private boolean isTooLong(String name) {
-        return name.trim().length() > MAX_NAME_LENGTH;
+        String trimmedName = name.trim();
+        return trimmedName.length() > MAX_NAME_LENGTH;
     }
 
     /**
