@@ -31,7 +31,7 @@ public class Cars {
      * @return 유효성 검증이 완료된 {@code Cars} 객체
      */
     public static Cars fromNames(String namesInput) {
-        String[] names = namesInput.split(NAME_DELIMITER);
+        String[] names = namesInput.split(NAME_DELIMITER, -1);
         List<String> trimmedNames = trimNames(names);
         List<CarName> carNames = toCarNames(trimmedNames);
         validateNoDuplicates(carNames);
