@@ -39,7 +39,7 @@ class PositionTest {
     /**
      * {@code increase} 메서드 호출 시, 값이 1 증가하는지, 원본 객체 변경 대신 새로운 객체가 반환되는지 검증
      */
-    @DisplayName("기능: increase 호출 시 1 증가, 새 객체 반환")
+    @DisplayName("성공: increase 호출 시 1 증가, 새 객체 반환")
     @Test
     void check_ReturnsNewObject_onIncrease() {
         Position posOne = posZero.increase();
@@ -54,7 +54,7 @@ class PositionTest {
     /**
      * {@code isSameOrFurtherThan}로 위치 비교 결과 확인
      */
-    @DisplayName("기능: isSameOrFurtherThan이 위치를 정확히 비교한다")
+    @DisplayName("성공: isSameOrFurtherThan이 위치를 정확히 비교한다")
     @Test
     void check_isSameOrFurtherThan() {
         Position posOne = posZero.increase();

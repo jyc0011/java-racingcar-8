@@ -10,7 +10,7 @@ import static org.assertj.core.api.Assertions.assertThatCode;
 import static org.assertj.core.api.Assertions.assertThatThrownBy;
 
 /**
- * {@code CarName}의 단위 테스트
+ * {@code CarName} 단위 테스트
  *
  * <p> {@code CarName} 생성 시 유효성 검증(이름 길이, 공백 여부)과 Value Object로서의 동작 검증
  */
