@@ -7,7 +7,8 @@
     - [ ] 자동차 이름
         - [ ] 컴마로 각 차들을 구분한다.
         - [ ] 자동차 별 이름은 5자 이하여야 한다.
-        - [ ] 인원 수에는 제한을 두지 않는다. 다만 0명 이상이어야 한다.
+        - [ ] 인원 수에는 제한을 두지 않는다. 다만 1명 이상이어야 한다.
+        - [ ] 동일한 이름은 2번 나올 수 없다.
     - [ ] 이동 횟수
         - [ ] 자연수로 제한한다.
 
@@ -50,9 +51,11 @@
     - [ ] 단위 테스트
         - wrapper
             - [ ] 1자 이상 5자 이하의 이름으로 생성 시 성공한다. (예: "pobi", "abcde")
-            - [ ] 5자를 초과하는 이름으로 생성 시 IllegalArgumentException이 발생한다. (예: "javaji")
+            - [ ] 동일한 이름이 두 번 입력될 시 시 IllegalArgumentException이 발생한다.
+            - [ ] 5자를 초과하는 이름으로 생성 시 IllegalArgumentException이 발생한다. (예: "abcdef")
             - [ ] 이름이 0자(빈 문자열)일 경우 IllegalArgumentException이 발생한다. (예: "")
             - [ ] 이름이 공백 문자만 있을 경우 IllegalArgumentException이 발생한다. (예: " ")
+            - [ ] 0명이 참여할 경우 IllegalArgumentException이 발생한다.
             - [ ] "1" 이상의 자연수 문자열로 생성 시 성공한다. (예: "1", "5")
             - [ ] "0" 또는 음수 문자열로 생성 시 IllegalArgumentException이 발생한다. (예: "0", "-1")
             - [ ] 숫자가 아닌 문자열로 생성 시 IllegalArgumentException이 발생한다. (예: "abc", " ")
