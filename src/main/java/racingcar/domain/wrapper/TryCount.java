@@ -20,8 +20,7 @@ public class TryCount {
      * @throws IllegalArgumentException 입력이 1 이상의 자연수가 아닐 경우
      */
     public TryCount(String input) {
-        int parsedCount = parseAndValidate(input);
-        this.count = parsedCount;
+        this.count = parseAndValidate(input);
     }
 
     private TryCount(int count) {
