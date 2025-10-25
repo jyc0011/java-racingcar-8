@@ -1,13 +1,13 @@
 package racingcar.domain.wrapper;
 
+import static org.assertj.core.api.Assertions.assertThat;
+import static org.assertj.core.api.Assertions.assertThatCode;
+import static org.assertj.core.api.Assertions.assertThatThrownBy;
+
 import org.junit.jupiter.api.DisplayName;
 import org.junit.jupiter.api.Test;
 import org.junit.jupiter.params.ParameterizedTest;
 import org.junit.jupiter.params.provider.ValueSource;
-
-import static org.assertj.core.api.Assertions.assertThat;
-import static org.assertj.core.api.Assertions.assertThatCode;
-import static org.assertj.core.api.Assertions.assertThatThrownBy;
 
 /**
  * {@code TryCount} 단위 테스트
@@ -21,7 +21,7 @@ class TryCountTest {
      */
     @DisplayName("성공: 1 이상 자연수이면 생성 성공")
     @ParameterizedTest
-    @ValueSource(strings = {"1","5","100"})
+    @ValueSource(strings = {"1", "5", "100"})
     void create_Success(String input) {
         assertThatCode(() -> new TryCount(input)).doesNotThrowAnyException();
     }
@@ -31,7 +31,7 @@ class TryCountTest {
      */
     @DisplayName("오류: 0, 음수, 숫자 아닌 문자, 공백이면 생성 불가")
     @ParameterizedTest
-    @ValueSource(strings = {"0","-1","-5","abc"," 1","1 "," ", "", "1.5"})
+    @ValueSource(strings = {"0", "-1", "-5", "abc", " 1", "1 ", " ", "", "1.5"})
     void create_Fail_WithInvalidInput(String input) {
         assertThatThrownBy(() -> new TryCount(input))
                 .isInstanceOf(IllegalArgumentException.class);
@@ -65,6 +65,7 @@ class TryCountTest {
         assertThat(decreasedTwice.hasMoreTries()).isTrue();
         TryCount countIsZero = decreasedTwice.decrease();
     }
+
     /**
      * {@code decrease}를 0일 때 호출하면, 오류
      */

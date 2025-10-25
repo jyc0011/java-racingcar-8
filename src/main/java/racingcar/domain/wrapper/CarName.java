@@ -93,4 +93,13 @@ public class CarName {
     public int hashCode() {
         return Objects.hash(name);
     }
+
+    /**
+     * 데이터 전달을 위해 캡슐화된 이름(name)을 반환
+     *
+     * @return 자동차 이름
+     */
+    public String name() {
+        return this.name;
+    }
 }

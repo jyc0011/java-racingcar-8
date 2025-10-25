@@ -1,4 +1,4 @@
 package racingcar.dto;
 
-public class CarState {
+public record CarState(String name, int position) {
 }

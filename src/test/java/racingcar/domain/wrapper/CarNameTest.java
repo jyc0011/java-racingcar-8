@@ -1,13 +1,13 @@
 package racingcar.domain.wrapper;
 
+import static org.assertj.core.api.Assertions.assertThat;
+import static org.assertj.core.api.Assertions.assertThatCode;
+import static org.assertj.core.api.Assertions.assertThatThrownBy;
+
 import org.junit.jupiter.api.DisplayName;
 import org.junit.jupiter.api.Test;
 import org.junit.jupiter.params.ParameterizedTest;
 import org.junit.jupiter.params.provider.ValueSource;
-
-import static org.assertj.core.api.Assertions.assertThat;
-import static org.assertj.core.api.Assertions.assertThatCode;
-import static org.assertj.core.api.Assertions.assertThatThrownBy;
 
 /**
  * {@code CarName} 단위 테스트
@@ -51,8 +51,7 @@ class CarNameTest {
     }
 
     /**
-     * {@code CarName}이 Value Object로서 이름이 같으면 동일한 객체로,
-     * 다르면 다른 객체로 취급되는지(equals, hashCode) 확인
+     * {@code CarName}이 Value Object로서 이름이 같으면 동일한 객체로, 다르면 다른 객체로 취급되는지(equals, hashCode) 확인
      */
     @DisplayName("성공: 같은 이름은 동일한 값으로 취급")
     @Test

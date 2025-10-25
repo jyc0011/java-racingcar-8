@@ -4,7 +4,7 @@ import java.util.Objects;
 
 /**
  * 자동차 위치 Value Object
- *<p> 위치 0부터 시작, {@code increase}를 통해 1씩 증가
+ * <p> 위치 0부터 시작, {@code increase}를 통해 1씩 증가
  */
 public class Position {
 
@@ -13,8 +13,7 @@ public class Position {
     private final int value;
 
     /**
-     * 기본 생성자
-     * 위치 0으로 초기화
+     * 기본 생성자 위치 0으로 초기화
      */
     public Position() {
         this(DEFAULT_POSITION);
@@ -75,5 +74,14 @@ public class Position {
     @Override
     public int hashCode() {
         return Objects.hash(value);
+    }
+
+    /**
+     * 데이터 전달을 위해 캡슐화된 위치(value)를 반환
+     *
+     * @return 자동차 이름
+     */
+    public int value() {
+        return this.value;
     }
 }
