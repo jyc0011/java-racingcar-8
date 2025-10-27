@@ -13,6 +13,12 @@ public class Input {
     private static final String MSG_READ_TRY_COUNT = "시도할 횟수는 몇 회인가요?";
 
     /**
+     * 기본 생성자
+     */
+    public Input() {
+    }
+
+    /**
      * 자동차 이름 입력 프롬프트 출력, 사용자 입력 문자열 반환
      *
      * @return 사용자 입력

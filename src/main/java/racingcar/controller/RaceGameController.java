@@ -27,10 +27,11 @@ public class RaceGameController {
 
     /**
      * 레이싱 게임 전체 흐름 제어
-     * <p>
+     * <ol>
      * <li>자동차 이름, 시도 횟수 입력, 도메인 객체 생성</li>
      * <li>입력된 횟수만큼 경주 라운드 실행, 중간 결과 출력</li>
      * <li>최종 우승자 판별, 출력</li>
+     * </ol>
      * 예외({@link IllegalArgumentException})는 Application에서 처리
      */
     public void run() {

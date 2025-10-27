@@ -19,6 +19,12 @@ public class Output {
     private static final String WINNER_DELIMITER = ", ";
 
     /**
+     * 기본 생성자
+     */
+    public Output() {
+    }
+
+    /**
      * 실행 결과 출력
      */
     public void printRaceStart() {
